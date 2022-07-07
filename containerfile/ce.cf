@@ -1,0 +1,13 @@
+FROM hdf5
+
+ARG SH_RUN=ce.sh
+ARG TMPDIR=/tmp
+
+COPY run/$SH_RUN $TMPDIR
+
+RUN \
+    bash $TMPDIR/$SH_RUN    && \
+    rm $TMPDIR/$SH_RUN      && \
+    useradd -D sailor
+
+USER sailor
