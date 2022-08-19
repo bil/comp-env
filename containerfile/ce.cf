@@ -7,7 +7,5 @@ COPY run/$SH_RUN $TMPDIR
 
 RUN \
     bash $TMPDIR/$SH_RUN    && \
-    rm $TMPDIR/$SH_RUN      && \
-    useradd -D sailor
+    rm $TMPDIR/$SH_RUN
 
-USER sailor
