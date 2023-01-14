@@ -1,5 +1,9 @@
+# Makefile specific for podman, support rootless mode
+# to make compatible with docker, substitute docker for podman, remove "--format docker" and "--remove-signatures" flags
+
 IMAGES = base_2204 scipy hdf5 ce
 TARGET = ce
+# CE-DST must be set as an environment variable for the make push commands to work
 DST=${CE-DST}
 
 all: $(IMAGES)
@@ -17,4 +21,3 @@ push-dev:
 
 prune:
 	podman image prune -f
-
