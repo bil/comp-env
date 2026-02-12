@@ -21,6 +21,8 @@ pip install google-api-python-client google-cloud-logging google-auth google-clo
 pip install gspread gspread-pandas pydrive boto3 pynamodb oauth2client oauthlib
 pip install requests requests_oauthlib lxml beautifulsoup4
 pip install yattag jinja2
+pip install fire
+pip install pylint memory_profiler
 #pip install dash dash_daq dash-google-auth jupyter-plotly-dash dash-bootstrap-components dash_flexbox_grid click click-plugins cligj
 pip install plotly bokeh pandas_bokeh seaborn altair ggplot
 pip install sqlalchemy dask ray modin joblib tables #h5netcdf xarray
@@ -55,8 +57,7 @@ pip install statsmodels scikit-image networkx nose pytest
 # tar xvzf /tmp/ngrok.tgz -C /usr/local/bin
 
 # document processing
-#pip install fpdf
-#apt-get -qq install texlive texlive-science pandoc ghostscript
+apt-get -qq install ghostscript texlive texlive-latex-extra texlive-fonts-extra pandoc qpdf
 
 # audo/image/video tools
 apt-get -qq install libavcodec-extra libavfilter-extra ffmpeg imagemagick libtiff-dev #libgdal-dev
