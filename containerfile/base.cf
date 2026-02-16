@@ -1,6 +1,6 @@
-FROM ubuntu:22.04
+FROM ubuntu:24.04
 
-ARG SH_RUN=base_2204.sh
+ARG SH_RUN=base.sh
 ARG TMPDIR=/tmp
 
 COPY run/$SH_RUN $TMPDIR

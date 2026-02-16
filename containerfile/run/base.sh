@@ -3,7 +3,7 @@ set -o errexit
 set -o pipefail
 
 REPO=http://us.archive.ubuntu.com/ubuntu
-DIST=jammy
+DIST=noble
 TMPDIR=/tmp
 export DEBIAN_FRONTEND=noninteractive
 
@@ -24,13 +24,18 @@ apt-get -qq upgrade
 apt-get -qq dist-upgrade
 
 # base packages
-apt-get -qq install wget curl rsync git zip unzip p7zip man-db less vim ca-certificates
+apt-get -qq install wget curl rsync git zip unzip p7zip man-db less vim nano ca-certificates
 
 # python + pip
 apt-get -qq install python3 python3-venv
+rm /usr/lib/python3.12/EXTERNALLY-MANAGED
 curl https://bootstrap.pypa.io/get-pip.py -o $TMPDIR/get-pip.py
 python3 $TMPDIR/get-pip.py
 rm $TMPDIR/get-pip.py
+
+# node.js + npm + nvm
+apt-get -qq install nodejs npm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 
 # rclone
 curl https://rclone.org/install.sh | bash

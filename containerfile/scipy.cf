@@ -1,4 +1,4 @@
-FROM base_2204
+FROM base
 
 ARG SH_RUN=scipy.sh
 ARG TMPDIR=/tmp
