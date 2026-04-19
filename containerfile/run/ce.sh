@@ -15,13 +15,13 @@ apt-get -qq update
 # many Python libraries
 pip install ipython notebook jupyterlab voila
 pip install jupyterlab-git jupyterlab_hdf #jupyterlab_sql
-pip install python-rclone
+pip install python-rclone python-gitlab
 pip install python-dateutil compress-pickle sqlitedict pipenv
-pip install google-api-python-client google-cloud-logging google-auth google-cloud-bigquery google-cloud-bigquery-storage google-cloud-logging google-cloud-storage google-cloud-firestore db-dtypes
+pip install google-api-python-client google-cloud-logging google-auth google-cloud-bigquery google-cloud-bigquery-storage google-cloud-logging google-cloud-storage google-cloud-firestore google-cloud-pubsub db-dtypes
 pip install gspread gspread-pandas pydrive boto3 pynamodb oauth2client oauthlib
 pip install requests requests_oauthlib lxml beautifulsoup4
 pip install yattag jinja2
-pip install fire
+pip install fire python-dotenv
 pip install pylint memory_profiler
 #pip install dash dash_daq dash-google-auth jupyter-plotly-dash dash-bootstrap-components dash_flexbox_grid click click-plugins cligj
 pip install plotly bokeh pandas_bokeh seaborn altair ggplot
@@ -46,13 +46,11 @@ pip install datalad biopython kaggle
 pip install tensorstore
 
 # sys utils
-# apt-get -qq install htop iftop iotop multitail
+apt-get -qq install htop iftop iotop multitail
 # # network tools
 # echo "debconf krb5-config/default_realm stanford.edu" > debconf-set-selections
-# apt-get -qq install openssl curl mosh stunnel net-tools dnsutils traceroute whois iputils-arping iputils-clockdiff iputils-ping iputils-tracepath inetutils-ftp inetutils-telnet lftp fping iperf tcpdump nmap netcat libpcap-dev libzmq5 krb5-user
-# pip install pyzmq git+https://github.com/vpiserchia/pypcap
-# # related dev tools
-# #apt-get -qq install git-annex
+apt-get -qq install openssl curl mosh stunnel net-tools dnsutils traceroute whois iputils-arping iputils-clockdiff iputils-ping iputils-tracepath inetutils-ftp inetutils-telnet lftp fping iperf3 tcpdump nmap netcat-openbsd libpcap-dev libzmq5 speedtest-cli
+pip install pyzmq scapy
 # # ngrok
 # wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz -O /tmp/ngrok.tgz
 # tar xvzf /tmp/ngrok.tgz -C /usr/local/bin
