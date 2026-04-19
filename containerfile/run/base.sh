@@ -34,8 +34,15 @@ python3 $TMPDIR/get-pip.py
 rm $TMPDIR/get-pip.py
 
 # node.js + npm + nvm
-apt-get -qq install nodejs npm
+export NVM_DIR=/opt/nvm
+NODE_VERSION=v24.15.0
+#apt-get -qq install nodejs npm
+mkdir -p $NVM_DIR
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
+\. "$NVM_DIR/nvm.sh"
+nvm install $NODE_VERSION
+nvm alias default $NODE_VERSION
+nvm use default
 
 # rclone
 curl https://rclone.org/install.sh | bash

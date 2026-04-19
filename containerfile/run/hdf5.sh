@@ -11,7 +11,7 @@ HDF5_MINOR=14
 HDF5_PATCH=6
 HDF5=${HDF5_MAJOR}.${HDF5_MINOR}.${HDF5_PATCH}
 HDF5_PATH=/usr/local
-H5PY=3.15.1
+H5PY=3.16.0
 
 # hdf5 dependency dev libraries
 apt-get -qq install zlib1g-dev libssl-dev libcurl4-openssl-dev

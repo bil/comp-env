@@ -8,3 +8,5 @@ COPY run/$SH_RUN $TMPDIR
 RUN \
     bash $TMPDIR/$SH_RUN    && \
     rm $TMPDIR/$SH_RUN
+
+ENV PATH $PATH:/opt/nvm/versions/node/v24.15.0/bin
